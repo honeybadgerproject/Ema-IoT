@@ -1,0 +1,21 @@
+{
+  "name": "Ema-IoT",
+  "version": "1.0.0",
+  "description": "ema",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Colorado, Daniel Olivier, Jose Rubio, Yabin Monroy",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "moment": "^2.10.6"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
