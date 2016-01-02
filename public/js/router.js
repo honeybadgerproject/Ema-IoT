@@ -3,7 +3,7 @@
 */
 
 'use strict';
-var myDHS = 'https://127.0.0.1:9001',
+var myDHS = 'https://45.55.51.65:9001',
   config,
   virtual_numbers,
   ewebrtc_domain;
