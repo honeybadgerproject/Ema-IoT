@@ -35,15 +35,15 @@
 		"0.0.0.0:9001",
 		"localhost",
 		"localhost:9001",
-		"127.0.0.1:9001"
+		"45.55.51.65:9001"
 	],
 	"default_api_env": "sandbox",
 	"sandbox": {
 		"app_key": "tur1otrgt6vuwmn1u3acpbneefrz688m",
 		"app_secret": "gsgnomebtw2coxx13fnlc7qn79k5xdic",
-		"oauth_callback": "https://127.0.0.1:9001/oauth/callback",
-		"app_token_url": "https://127.0.0.1:9001/tokens",
-		"app_e911id_url": "https://127.0.0.1:9001/e911ids",
+		"oauth_callback": "https://45.55.51.65:9001/oauth/callback",
+		"app_token_url": "https://45.55.51.65:9001/tokens",
+		"app_e911id_url": "https://45.55.51.65:9001/e911ids",
 		"virtual_numbers_pool": [
 			"Please contact your AT&T Representative for a Virtual Number"
 		],
@@ -52,9 +52,9 @@
 	"prod": {
 		"app_key": "<your-app-key>",
 		"app_secret": "<your-app-secret>",
-		"oauth_callback": "https://127.0.0.1:9001/oauth/callback",
-		"app_token_url": "https://127.0.0.1:9001/tokens",
-		"app_e911id_url": "https://127.0.0.1:9001/e911ids",
+		"oauth_callback": "https://45.55.51.65:9001/oauth/callback",
+		"app_token_url": "https://45.55.51.65:9001/tokens",
+		"app_e911id_url": "https://45.55.51.65:9001/e911ids",
 		"virtual_numbers_pool": [
 			"number1",
 			"number2",
