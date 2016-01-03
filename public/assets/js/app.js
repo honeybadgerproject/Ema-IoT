@@ -9,7 +9,21 @@ emaApp.config(function($routeProvider) {
 		.otherwise({redirectTo: '/dashboard'});
 });
 
-emaApp.controller('DashboardController', [ '$scope', function($scope) {
+emaApp.controller('DashboardController', [ '$scope', '$http', function($scope, $http) {
+
+	$scope.getStreams = function() {
+		console.log("call all the streams");
+		var stream;
+		$http.post('/streams', stream).success(function(response) {
+			console.log(response);
+		});
+	};
+
+
+
+
+		//getAllStreams();
+
 //	console.log(google);
 
 	 //google.load("visualization", "1", {packages:["corechart"]});

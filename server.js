@@ -289,18 +289,52 @@ m2x.devices.list(function(response) {
     }
 });
 
+m2x.devices.streams("282a67bdca7eacce13c5c59dfede9ab6",  function(response) {
 
-app.get('/streams', function(req, res) {
+      console.log(">>>>> streams response");
+    if (response.isSuccess()) {
+            console.log(response);
+
+    } else {
+        console.log(response.error());
+    }
+});
+
+m2x.devices.stream("282a67bdca7eacce13c5c59dfede9ab6", "PulseRate", function(response) {
+
+      console.log(">>>>> stream response");
+    if (response.isSuccess()) {
+
+            console.log(response.json.value);
+
+
+    } else {
+        console.log(response.error());
+    }
+});
+
+m2x.devices.streamValues("282a67bdca7eacce13c5c59dfede9ab6", "PulseRate", function(response) {
+  console.log(">>>>> stream values response");
+    if (response.isSuccess()) {
+            console.log(response);
+
+    } else {
+        console.log(response.error());
+    }
+});
+
+
+
+app.post('/streams', function(req, res) {
   console.log("return all the streams");
 
-
 });
+
 
 
 app.get('/streams/:id', function(req, res) {
   console.log("return the stream selected by the id");
   var id = req.params.id;
-
 
 });
 
