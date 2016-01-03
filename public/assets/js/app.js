@@ -9,13 +9,13 @@ emaApp.config(function($routeProvider) {
 		.otherwise({redirectTo: '/dashboard'});
 });
 
-emaApp.controller('DashboardController', [ '$scope', function($scope) { 
-	console.log(google);
+emaApp.controller('DashboardController', [ '$scope', function($scope) {
+//	console.log(google);
 
 	 //google.load("visualization", "1", {packages:["corechart"]});
-    
+
  //    google.setOnLoadCallback(drawChart);
-    
+
  //    function drawChart() {
  //        var data = new google.visualization.DataTable();
 
@@ -54,7 +54,7 @@ emaApp.controller('DashboardController', [ '$scope', function($scope) {
 
 
  //        var chart_lines = new google.visualization.LineChart(document.getElementById('chart-content'));
-        
+
  //        chart_lines.draw(data, options);
  //    }
 
