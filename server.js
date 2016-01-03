@@ -325,18 +325,46 @@ m2x.devices.streamValues("282a67bdca7eacce13c5c59dfede9ab6", "PulseRate", functi
 
 
 
-app.post('/streams', function(req, res) {
-  console.log("return all the streams");
+var router = express.Router();              // get an instance of the express Router
 
+router.get('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });
 });
 
 
+router.route('/streams')
+    .get(function(req, res) {
 
-app.get('/streams/:id', function(req, res) {
-  console.log("return the stream selected by the id");
-  var id = req.params.id;
+      m2x.devices.streams("282a67bdca7eacce13c5c59dfede9ab6",  function(response) {
+            console.log(">>>>> streams response");
+          if (response.isSuccess()) {
+                  //console.log(response);
+                  res.json(JSON.parse(response.raw));
+          } else {
+              console.log(response.error());
+          }
+      });
 
-});
+    });
+
+
+  router.route('/stream/:name')
+    .get(function(req, res) {
+
+      m2x.devices.streamValues("282a67bdca7eacce13c5c59dfede9ab6", req.params.name, function(response) {
+        console.log(">>>>> stream values response");
+          if (response.isSuccess()) {
+            //console.log(response);
+            var item = JSON.parse(response.raw);
+            item.name = req.params.name;
+            res.json(item);
+          } else {
+              console.log(response.error());
+          }
+      });
+    });
+
+app.use('/api', router);
 
 
 // ---------------------------------------------
